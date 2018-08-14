@@ -1,0 +1,16 @@
+syntax = "proto3";
+
+package common;
+
+option optimize_for = LITE_RUNTIME;
+option java_package = "io.protostuff.example.multimodule.common";
+
+message Test {
+
+    string version = 1;
+
+    string ha = 2;
+
+    string identifier = 3;
+
+}

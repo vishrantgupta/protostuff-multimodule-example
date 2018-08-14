@@ -7,10 +7,9 @@
         <artifactId>converter</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-
     <modelVersion>4.0.0</modelVersion>
 
-    <artifactId>common</artifactId>
+    <artifactId>schema</artifactId>
 
     <dependencies>
         <dependency>
@@ -18,11 +17,15 @@
             <artifactId>protostuff-core</artifactId>
         </dependency>
         <dependency>
+            <artifactId>protostuff-maven-plugin</artifactId>
+            <groupId>io.protostuff</groupId>
+            <version>2.1.14</version>
+        </dependency>
+        <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
 
     <build>
@@ -33,7 +36,7 @@
                 <configuration>
                     <protoModules>
                         <protoModule>
-                            <source>src/main/resources/common.proto</source>
+                            <source>src/main/protobuf/test.proto</source>
                             <outputDir>target/generated-sources</outputDir>
                             <output>java_bean</output>
                             <encoding>UTF-8</encoding>
